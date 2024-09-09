@@ -52,10 +52,9 @@ public class VendorWarehouseMappingApplication {
 					.toList();
 
 			for(var manufacturerId :manufacturerIds) {
-
 				System.out.println("Response from partner app service:  " + manufacturerId);
-				//var response = vendorWarehouseApiService.removeDuplicateVendor(manufacturerId, warehouseId);
-				//System.out.println("Response from partner app service: "+ response);
+				var response = vendorWarehouseApiService.removeDuplicateVendor(manufacturerId, warehouseId);
+				System.out.println("Response from partner app service: "+ response);
 			}
 				csvReader.close();
 
